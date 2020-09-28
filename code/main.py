@@ -47,7 +47,7 @@ if __name__ == "__main__":
         vol_strategy.get_trade_table()
         trade_table = vol_strategy.trade_table2dataframe()
         statistics = vol_strategy.get_statistics()
-        with pd.ExcelWriter("../plot/" + str(strategy_name) + '_winsT_' + \
+        with pd.ExcelWriter("../excel/" + str(strategy_name) + '_winsT_' + \
             str(vol_window) +'_fcType_' + str(factor_type) + ".xlsx") as writer:
             trade_table.to_excel(writer, sheet_name='trade_table')
             statistics.to_excel(writer, sheet_name='statistics')
